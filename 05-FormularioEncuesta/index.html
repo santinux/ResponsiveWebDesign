@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Información del documento -->
+<head>
+    <title>Encuesta TUASSL</title>
+    <meta charset="UTF-8"/>
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+<!-- Contenido del documento -->
+<body>
+    <!-- Título y descripcion -->
+    <h1 id="titulo">Encuesta TUASSL</h1>
+    <p id="descripcion">
+        ¡Hola! Esta es una breve encuesta que presentamos desde el centro de
+        estudiantes para todos los estudiantes que se encuentren cursando
+        actualmente la "Tecnicatura Universitaria en Administración de Sistemas
+        y Software Libre" de nuestra Facultad de Informática.
+    </p>
+    <!-- Formulario -->
+    <form id="formulario-encuesta" method="post" action="www.fi.uncoma.edu.ar/cefai">
+        <!-- Información personal -->
+        <fieldset>
+            <legend>
+                Información Personal
+            </legend>
+            <label id="label-nombre" for="nombre">
+                Nombre: <input id="nombre" class="bajo-linea" type="text" placeholder="Ada" required/>
+            </label>
+            <label id="label-apellido" for="apellido">
+                Apellido: <input id="apellido" class="bajo-linea" type="text" placeholder="Lovelace" required/>
+            </label>
+            <label id="label-email" for="email">
+                Email: <input id="email" type="email" class="bajo-linea" placeholder="ada.lovelace@est.fi.uncoma.edu.ar" required/>
+            </label>
+            <label id="label-edad" for="edad">
+                Edad: <input id="edad" type="number" class="bajo-linea" min="10" max="100" required/>
+            </label>
+        </fieldset>
+        <!-- Situación laboral -->
+        <fieldset>
+            <legend>
+                Situación Laboral
+            </legend>
+            <label id="label-situacion-laboral" for="situacion-laboral">
+                <select id="situacion-laboral" class="bajo-linea" name="situacion-laboral">
+                    <option value="">
+                        (Seleccione una opción)
+                    </option>
+                    <option value="1">
+                        Solo Estudio
+                    </option>
+                    <option value="2">
+                        Estudio y Trabajo
+                    </option>
+                </select>
+            </label>
+        </fieldset>
+        <!-- Experiencia de cursada -->
+        <fieldset>
+            <legend>
+                Experiencia de Cursada
+            </legend>
+            <p>
+                Haciendo un breve análisis -muy superficial- ¿Cómo califica
+                la calidad de las cursadas desde que inició la carrera hasta
+                el día de hoy?
+            </p>
+            <label for="calidad-baja">
+                <input id="calidad-baja" class="en-linea" type="radio" name="calidad-cursada" required/>
+                Baja.
+            </label>
+            <label for="calidad-media">
+                <input id="calidad-media" class="en-linea" type="radio" name="calidad-cursada" required/>
+                Media.
+            </label>
+            <label for="calidad-alta">
+                <input id="calidad-alta" class="en-linea" type="radio" name="calidad-cursada" required/>
+                Alta.
+            </label>
+            <p>
+                ¿Recomendaría su carrera u otras carreras a alguien más?
+                De no ser así, no marque ninguna opción.
+            </p>
+            <label for="recomienda-su-carrera">
+                <input id="recomienda-su-carrera" class="en-linea" type="checkbox" name="recomienda" >
+                Recomedaría mi carrera.
+            </label>
+            <label for="recomienda-otras-carreras">
+                <input id="recomienda-otras-carreras" class="en-linea" type="checkbox" name="recomienda" >
+                Recomedaría otras carreras.
+            </label>
+            <p>
+                Si lo desea, puede dejar algún comentario o sugerencia:
+            </p>
+            <label for="resegna">
+                <textarea
+                id="resegna"
+                class="bajo-linea"
+                name="resegna"
+                rows="3"
+                cols="30"
+                placeholder="Escriba aquí lo que desee...">
+                </textarea>
+            </label>
+        </fieldset>
+        <!-- Botón de envío -->
+        <input id="enviar" type="submit" value="Enviar">
+    </form>
+</body>
+</html>
